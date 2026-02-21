@@ -286,6 +286,7 @@ h2{
 .bin-accent.gnp{ background: var(--gnp); }
 .bin-accent.both{ background: var(--both); }
 .bin-accent.neither{ background: var(--neither); }
+.bin-accent.import{ background: #b45309; } /* warm amber */
 
 /* Cards */
 .card{
