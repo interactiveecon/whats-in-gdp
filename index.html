@@ -22,17 +22,18 @@
         <p class="sub">
           Sort each card for the <strong>U.S.</strong> into the correct bucket.
           GDP includes the market value of <strong>final</strong> goods and services produced <strong>within the U.S.</strong>
-          during the period. Many items are excluded to avoid <strong>double counting</strong> or because they are not production.
+          during the period. Many items are excluded to avoid <strong>double counting</strong> or because they are not domestic production.
         </p>
 
         <details class="howto">
           <summary>How this works</summary>
           <div class="howto-body">
             <ul>
-              <li><strong>Included</strong>: new final goods/services produced domestically during the period (incl. investment & inventories, gov’t purchases, exports).</li>
+              <li><strong>Included</strong>: new final goods/services produced domestically during the period (incl. investment & inventories, government purchases, exports).</li>
               <li><strong>Intermediate goods</strong> are excluded to avoid double counting (value shows up in the final good).</li>
               <li><strong>Transfers & financial transactions</strong> are excluded (not payments for current production).</li>
               <li><strong>Used goods</strong> are excluded (not current production). Some <strong>services around used goods</strong> (e.g., dealer fees) are included.</li>
+              <li><strong>Imports</strong> are excluded from <em>U.S.</em> GDP because production occurs abroad (they matter for net exports, but not domestic production).</li>
             </ul>
           </div>
         </details>
@@ -81,7 +82,7 @@
     <section class="panel">
       <div class="panel-head">
         <h2>Bins</h2>
-        <p class="panel-sub">Classify each scenario relative to GDP accounting rules.</p>
+        <p class="panel-sub">Classify each scenario using GDP accounting rules.</p>
       </div>
 
       <div class="bin-grid">
@@ -116,14 +117,22 @@
           </div>
           <div id="binUSED" class="dropzone" data-bin="USED" aria-label="Used goods and non-market excluded bin"></div>
         </div>
+
+        <div class="bin">
+          <div class="bin-title">
+            <span class="bin-accent import"></span>
+            <h3>Excluded: Imports (produced abroad)</h3>
+          </div>
+          <div id="binIMP" class="dropzone" data-bin="IMP" aria-label="Imports excluded bin"></div>
+        </div>
       </div>
 
-      <!-- Polished rubric strip (same vibe) -->
+      <!-- Polished rubric strip -->
       <div class="rubric" aria-label="Core ideas checklist">
         <div class="rubric-item" id="ruleFinal">
           <span class="rubric-icon" aria-hidden="true">○</span>
           <div class="rubric-text">
-            <div class="rubric-title">Final goods</div>
+            <div class="rubric-title">Final vs intermediate</div>
             <div class="rubric-sub">Avoid double counting</div>
           </div>
         </div>
@@ -132,15 +141,15 @@
           <span class="rubric-icon" aria-hidden="true">○</span>
           <div class="rubric-text">
             <div class="rubric-title">Not production</div>
-            <div class="rubric-sub">Transfers & financial excluded</div>
+            <div class="rubric-sub">Transfers & asset trades excluded</div>
           </div>
         </div>
 
-        <div class="rubric-item" id="ruleTiming">
+        <div class="rubric-item" id="ruleDomestic">
           <span class="rubric-icon" aria-hidden="true">○</span>
           <div class="rubric-text">
-            <div class="rubric-title">Current period</div>
-            <div class="rubric-sub">Used goods excluded (services may count)</div>
+            <div class="rubric-title">Domestic production</div>
+            <div class="rubric-sub">Imports excluded from U.S. GDP</div>
           </div>
         </div>
       </div>
@@ -178,7 +187,7 @@
   <footer class="container footer">
     <div class="footer-inner">
       <div class="footer-note">GDP counts <strong>domestic</strong> production of <strong>final</strong> goods/services in the period.</div>
-      <div class="footer-note">Reuses the same soft-academic stylesheet.</div>
+      <div class="footer-note">Same soft-academic stylesheet as your other lab.</div>
     </div>
   </footer>
 
